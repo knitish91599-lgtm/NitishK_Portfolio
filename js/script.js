@@ -44,45 +44,26 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 ------------------------------------ */
 const projects = [
   {
-    title: 'Project One',
-    icon: '📊',
+    title: 'Serverless AI Blog Generator',
+    icon: '✍️',
     image: null,
-    status: 'live',
-    tags: ['Python', 'Tool', 'Tool'],
-    desc: 'What this project does, how it works, and what problem it solves. Two or three sentences is ideal.',
-    highlight: 'One standout result — a number, a metric, or what makes it interesting.',
-    github: 'https://github.com/your-username/project-one'
+    status: 'soon',
+    tags: ['AWS Lambda', 'API Gateway', 'Bedrock', 'Llama 3.3', 'S3', 'CloudWatch'],
+    desc: 'A web tool that turns a topic into a 500-word article using AWS serverless services and the Llama 3.3 model on Bedrock. Every article is saved to S3 with version history, and a simple web page lets users copy or download the result.',
+    highlight: 'Tuned prompts plus retries and CloudWatch logging produce consistent articles and make issues easy to trace.',
+    //github: null
   },
   {
-    title: 'Project Two',
-    icon: '🛠️',
-    image: null,
-    status: 'live',
-    tags: ['Tool', 'Tool', 'Tool'],
-    desc: 'What this project does, how it works, and what problem it solves. Two or three sentences is ideal.',
-    highlight: 'One standout result — a number, a metric, or what makes it interesting.',
-    github: 'https://github.com/your-username/project-two'
-  },
-  {
-    title: 'Project Three',
+    title: 'Personal Task & Knowledge MCP Server',
     icon: '🧠',
     image: null,
     status: 'soon',
-    tags: ['Tool', 'Tool', 'Tool'],
-    desc: 'A project you are still working on. Describe the idea and the approach.',
-    highlight: 'What you are aiming for, or an early result.',
+    tags: ['MCP', 'RAG', 'Hybrid Search', 'SQLCipher'],
+    desc: 'A private, local assistant that lets AI tools search, answer questions about, and manage tasks from personal notes, PDFs and email. It combines keyword and meaning-based search (RAG) over personal data that never leaves the machine.',
+    highlight: 'Encryption, personal-info removal, confirmation prompts and action logging keep data safe and every action traceable.',
     github: null
   },
-  {
-    title: 'Project Four',
-    icon: '🎯',
-    image: null, // e.g. 'assets/project-four.png'
-    status: 'live',
-    tags: ['Tool', 'Tool', 'Tool'],
-    desc: 'What this project does, how it works, and what problem it solves. Two or three sentences is ideal.',
-    highlight: 'One standout result — a number, a metric, or what makes it interesting.',
-    github: 'https://github.com/your-username/project-four'
-  }
+  
 ];
 
 const grid = document.getElementById('projects-grid');
@@ -94,9 +75,7 @@ grid.innerHTML = projects.map(p => `
     <div class="project-body">
       <div class="project-top-row">
         <h3>${p.title}</h3>
-        <span class="project-badge ${p.status === 'live' ? 'badge-live' : 'badge-soon'}">
-          ${p.status === 'live' ? 'Code available' : 'Repo coming soon'}
-        </span>
+       
       </div>
       <p class="project-desc">${p.desc}</p>
       <p class="project-highlight">${p.highlight}</p>
