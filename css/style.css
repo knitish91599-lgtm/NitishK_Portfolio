@@ -275,6 +275,16 @@ a { color: inherit; text-decoration: none; }
   flex-wrap: wrap;
 }
 .timeline-content h3 { margin: 0 0 4px; font-size: 1.25rem; }
+/* Company logo: sized to the heading font (1em) so it never grows the line */
+.company-logo {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  object-fit: contain;
+  border-radius: 4px;
+  vertical-align: -0.12em;
+  margin-right: 0.45em;
+}
 .timeline-date {
   color: var(--text-dimmer);
   font-size: 0.82rem;
@@ -308,6 +318,13 @@ a { color: inherit; text-decoration: none; }
   font-weight: 600;
   padding: 5px 11px;
   border-radius: 999px;
+}
+/* Small icon inside a tag / skill-card title: line-height 1 keeps the pill height unchanged */
+.tag-icon {
+  display: inline-block;
+  font-size: 0.95em;
+  line-height: 1;
+  margin-right: 0.4em;
 }
 
 /* ---------- Projects ---------- */
